@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #576f35;
+  color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #576f35;
+/*
+  width: 100%;
+  min-height: 100vh;
+  background: #576f35;*/
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  height: 95px;
+
+  padding: 30px 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+/* Figma'daki küçük 6 noktalı logo */
+
+.logo-icon {
+  width: 18px;
+  height: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 4px);
+  grid-template-rows: repeat(2, 4px);
+
+  gap: 2px;
+}
+
+.logo-icon span {
+  width: 4px;
+  height: 4px;
+
+  background: white;
+  border-radius: 1px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+
+  padding: 0 16px;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 13px;
+
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.03);
+
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+
+/* SHOP NOW */
+
+.btn-shop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+
+  padding: 0 30px;
+
+  margin-left: 10px;
+
+  background: #7a2442;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  border-radius: 25px;
+
+  transition: 0.2s ease;
+}
+
+.btn-shop:hover {
+  background: #641d36;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+   display: flex;
+  width: 100%;
+  min-height: 796px;
+
+ /* min-height: 810px;
+
+  display: grid;
+  grid-template-columns: 50% 50%;*/
+}
+
+
+/* SOL YEŞİL ALAN */
+
+.hero-text {
+    width: 50%;
+  min-height: 796px;
+  background-color: #576f35;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 190px 80px 50px 100px;
+  /*
+  background: #576f35;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 150px 8% 80px;*/
+}
+
+
+/* BAŞLIK */
+
+.hero-text h1 {
+  font-size: clamp(45px, 4.2vw, 72px);
+
+  line-height: 0.96;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+
+  max-width: 600px;
+}
+
+
+/* AÇIKLAMA */
+
+.hero-text p {
+  margin-top: auto;
+
+  max-width: 430px;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  color: rgba(255,255,255,0.95);
+}
+
+.hero-image {
+    width: 50%;
+  height: 796px;
+  overflow: hidden;
+  /*
+  min-height: 810px;
+
+  background-image:
+    url("green-harvest-hero.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;*/
+}
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .main-header {
+    padding: 25px 5%;
+  }
+
+  .nav-link {
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .btn-shop {
+    padding: 0 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 45px;
+  }
+}
+
+
+/* =========================
+   MOBİL
+========================= */
+
+@media (max-width: 650px) {
+
+  .main-header {
+    height: 80px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text {
+    min-height: 480px;
+
+    padding: 130px 30px 50px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .hero-text p {
+    margin-top: 40px;
+  }
+
+  .hero-image {
+    min-height: 450px;
+  }
+}
+/* ==========================
+   HOW IT WORKS
+========================== */
+
+.how-it-works {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 760px;
+
+  margin: 0 auto;
+
+  display: flex;
+}
+
+
+/* ==========================
+   SOL FOTOĞRAF ALANI
+========================== */
+
+.how-image-area {
+  width: 50%;
+  min-height: 760px;
+
+  background-color: #7a3145;
+
+  padding: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-image {
+  width: 100%;
+  height: 560px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 30px;
+}
+
+
+/* ==========================
+   SAĞ YEŞİL ALAN
+========================== */
+
+.how-content {
+  width: 50%;
+  min-height: 760px;
+
+  background-color: #576f35;
+
+  padding: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* BAŞLIK */
+
+.how-description h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  color: #fbfbfb;
+  text-transform: uppercase;
+}
+
+.how-description h2 span {
+  color: #d4bfc4;
+}
+
+
+/* AÇIKLAMA */
+
+.how-description p {
+  margin-top: 25px;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #fbfbfb;
+}
+
+
+/* ==========================
+   ADIMLAR
+========================== */
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  list-style: none;
+}
+
+
+/* BEYAZ KARTLAR */
+
+.step {
+  min-height: 76px;
+
+  background-color: #fbfbfb;
+
+  border-radius: 15px;
+
+  padding: 12px 24px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+}
+
+
+/* NUMARALI DAİRELER */
+
+.step-number {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  background-color: #7a3145;
+  border: 5px solid #d4bfc4;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* KART YAZILARI */
+
+.step p {
+  color: #858585;
+
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.step strong {
+  color: #141414;
+  font-weight: 700;
+}
